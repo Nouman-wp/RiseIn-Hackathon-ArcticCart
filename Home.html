@@ -264,6 +264,67 @@ align        }
             font-size: 14px;
             margin: 0;
         }
+        .footer {
+    background-color: #16071d;
+    color: #ffffff;
+    padding: 40px 0;
+    margin-top: 40px;
+    box-shadow: 0px 0px 50px rgb(230, 160, 230);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #8a2be2;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #8a2be2;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
         
     </style>
 </head>
@@ -343,6 +404,51 @@ align        }
    
         <!-- Add more cards as needed -->
     </div>
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ArcticCart</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Games</h3>
+                <ul>
+                    <li><a href="./valorant.html">Valorant</a></li>
+                    <li><a href="./pubg.html">PUBG</a></li>
+                    <li><a href="#">Counter-Strike</a></li>
+                    <li><a href="#">Fortnite</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ArcticCart. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- footer  -->
 
     <script>
         document.querySelectorAll('.card').forEach(card => {
