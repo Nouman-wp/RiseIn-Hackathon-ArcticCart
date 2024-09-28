@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Store - ArcticCart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #000000, #1a0b2e);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: #16071d;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0px 0px 50px rgb(230, 160, 230);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f1f1f1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            background-color: #1a1b26;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: #cccccc;
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d5b4fc;
+            margin-bottom: 30px;
+        }
+
+        .store-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .store-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .store-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(138, 43, 226, 0.8);
+        }
+
+        .store-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .store-card-content {
+            padding: 20px;
+        }
+
+        .store-card h2 {
+            margin-top: 0;
+            color: #d5b4fc;
+        }
+
+        .store-card p {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #3a3af1, #7329c6);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        body{
+            background-image: url(./imgs/th-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 170px;
+        background-size: 200px;
+        }
+
+        .store-container {
+            display: flex;
+            justify-content: center;
+        
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="home.html" class="logo">ArcticCart</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home.html">Home</a></li>
+                    <li class="nav-item"><a href="#features">About</a></li>
+                    <li class="nav-item"><a href="./valorant.html">Valorant Store</a></li>
+                    <li class="nav-item"><a href="./pubg.html">PUBG Store</a></li>
+                    <li class="nav-item"><a href="#technology">Connect Neo X</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- cards section  -->
+        <div class="container">
+            <h1>PUBG Store</h1>
+
+            <video autoplay loop muted src="./video/Carlo-Outfit-3D-Animated-Emote-unscreen.gif">video</video>
+            <div class="store-container">
+                <div class="store-card">
+                    <img src="./imgs/gunsk.jpg" alt="PUBG Gun Skins">
+                    <div class="store-card-content">
+                        <h2>Gun Skins</h2>
+                        <p>Customize your weapons with our exclusive PUBG gun skins.</p>
+                        <a href="#" class="btn">Shop Gun Skins</a>
+                    </div>
+                </div>
+                <div class="store-card">
+                    <center><img  src="https://media.sketchfab.com/models/fc5b21a9b16b4fa6a6803bc5b967e0be/thumbnails/e8f1f29d43d649008eac7f581ea57feb/40dd12068dba4130b0a91e15069d9db7.jpeg" alt="PUBG Suits" id="xsu"></center>
+                    <div class="store-card-content">
+                        <h2>Suits</h2>
+                        <p>Stand out on the battlefield with our stylish PUBG suits.</p>
+                        <a href="#" class="btn">Shop Suits</a>
+                    </div>
+                </div>
+                <div class="store-card">
+                    <img src="https://wallpaperaccess.com/full/9905675.jpg" alt="PUBG Miscellaneous Items">
+                    <div class="store-card-content">
+                        <h2>Miscellaneous</h2>
+                        <p>Explore our collection of unique PUBG items and accessories.</p>
+                        <a href="#" class="btn">Shop Misc Items</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
