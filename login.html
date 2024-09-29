@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcticCart - User Profile</title>
+    <style>
+        body {
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #000000, #1a0b2e);
+            color: #ffffff;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+        position: relative;
+        top: -1510px;
+        margin: 550px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #d5b4fc;
+            
+        }
+        form {
+            box-shadow: 0px 10px 6000px #8a2be2;
+            display: flex;
+            flex-direction: column;
+            background-color: #8ad78c72;
+        }
+        input {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #3a3af1, #7329c6);
+            color: rgb(0, 0, 0);
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: 0 0 25px #8a2be2;
+        }
+        .toggle {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .toggle a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+       .banner{
+        
+        
+       }
+       .toggle{
+        font-weight: bold;
+       }
+       .button-primary-button{
+        color: white;
+        font-weight: bold;
+       }
+        
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <video autoplay loop muted plays-inline>
+            <source src="./imgs/backvideo.mp4">
+        </video>
+   
+    <div class="container">
+        <h1><b>Welcome Gamers !</b></h1>
+        <h1>ArcticCart</h1>
+        <div id="signup-form">
+            <form action="./home.html">
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit" class="button-primary-button">Sign Up</button>
+            </form>
+            <div class="toggle">
+                Already have an account? <a href="home.html" onclick="toggleForms()">Log in</a>
+            </div>
+        </div>
+        <div id="login-form" style="display: none;">
+            <form onsubmit="return logIn()">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="toggle">
+                Don't have an account? <a href="home.html" onclick="toggleForms()">Sign up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
