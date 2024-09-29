@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcticCart - In-Game NFT Marketplace</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #000000, #1a0b2e);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: #16071d;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0px 0px 50px rgb(230, 160, 230);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+
+        .nav {
+            background-color: #1a1b26;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-item a:hover {
+            color: #cccccc;
+        }
+
+        .main-content {
+            margin-top: 120px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(230, 160, 230, 0.7);
+        }
+
+        .main-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #1a1b26;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(230, 160, 230, 0.3);
+        }
+
+        .form label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form input, .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: #2a2a2a;
+            color: #ffffff;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #8a2be2;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form button:hover {
+            background-color: #9b4deb;
+        }
+
+        .connect-wallet {
+            margin: 40px 0;
+        }
+
+        .connect-wallet button {
+            padding: 12px 24px;
+            background-color: #8a2be2;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .connect-wallet button:hover {
+            background-color: #9b4deb;
+        }
+
+        .footer {
+            background-color: #16071d;
+            color: #ffffff;
+            padding: 40px 0;
+            margin-top: 40px;
+            box-shadow: 0px 0px 50px rgba(230, 160, 230, 0.5);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #8a2be2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .nav-list {
+                margin-top: 20px;
+            }
+            .main-content h1 {
+                font-size: 36px;
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #d5b4fc;
+            margin-bottom: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <a href="home.html" class="logo">ArcticCart</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home.html">Home</a></li>
+                    <li class="nav-item"><a href="./about.html">About</a></li>
+                    <li class="nav-item"><a href="./valorant.html">Valorant Store</a></li>
+                    <li class="nav-item"><a href="pubg.html">PUBG Store</a></li>
+                    <li class="nav-item"><a href="./connect.html">Connect Neo X</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1>Connect Your Neo X Wallet</h1>
+        <p>Start trading in-game NFTs with ArcticCart. Provide your details and connect your Neo X wallet to begin.</p>
+
+        <div class="form">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="game">Game</label>
+            <select id="game">
+                <option value="valorant">Valorant</option>
+                <option value="pubg">PUBG</option>
+                <option value="csgo">CSGO</option>
+                <option value="fortnite">Fortnite</option>
+            </select>
+
+            <button type="submit">Submit Info</button>
+        </div>
+
+        <div class="connect-wallet">
+            <button onclick="connectWallet()">Connect Neo X Wallet</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ArcticCart</h3>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ArcticCart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function connectWallet() {
+            alert('Connecting to Neo X Wallet...');
+            // Here you would integrate Neo X API to connect user's wallet.
+        }
+    </script>
+
+<script>
+    async function connectWallet() {
+        if (typeof window.ethereum !== 'undefined') {
+            try {
+                // Request account access if needed
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                
+                // Accounts now exposed, you can use accounts[0] for the user's wallet address
+                const walletAddress = accounts[0];
+                alert('Wallet connected: ' + walletAddress);
+
+                // You can now interact with the wallet and integrate further functionalities
+
+            } catch (error) {
+                console.error("User denied account access or there was an error", error);
+                alert('Failed to connect wallet: ' + error.message);
+            }
+        } else {
+            alert('MetaMask is not installed. Please install MetaMask to connect your wallet.');
+        }
+    }
+</script>
+
+
+</body>
+</html>    how to connect to  metamask when i click connect  to neox
