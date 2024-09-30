@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Store - ArcticCart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #000000, #1a0b2e);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: #16071d;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0px 0px 50px rgb(230, 160, 230);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f1f1f1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            background-color: #1a1b26;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: #cccccc;
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d5b4fc;
+            margin-bottom: 30px;
+        }
+
+        .store-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .store-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .store-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(138, 43, 226, 0.8);
+        }
+
+        .store-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .store-card-content {
+            padding: 20px;
+        }
+
+        .store-card h2 {
+            margin-top: 0;
+            color: #d5b4fc;
+        }
+
+        .store-card p {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #3a3af1, #7329c6);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            margin-left: 90px;
+
+
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 170px;
+            background-size: 200px;
+        }
+
+        .store-container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+
+        .footer {
+            background-color: #16071d;
+            color: #ffffff;
+            padding: 40px 0;
+            margin-top: 40px;
+            box-shadow: 0px 0px 50px rgba(230, 160, 230, 0.5);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #8a2be2;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #8a2be2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+
+
+
+
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #000000, #1a0b2e);
+    color: #ffffff;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header {
+    background-color: #16071d;
+    padding: 20px 0;
+    box-shadow: 0px 0px 50px rgba(230, 160, 230, 0.5);
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(230, 160, 230, 0.7);
+}
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav-item a:hover {
+    color: #8a2be2;
+}
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(230, 160, 230, 0.7);
+}
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #8a2be2;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #9b4deb;
+}
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fbc02d;
+}
+.stat-label {
+    font-size: 16px;
+    color: #cccccc;
+}
+.footer {
+    background-color: #16071d;
+    color: #ffffff;
+    padding: 40px 0;
+    margin-top: 40px;
+    box-shadow: 0px 0px 50px rgba(230, 160, 230, 0.5);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #8a2be2;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: #8a2be2;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+}
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    .nav-list {
+        margin-top: 20px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="home2.html" class="logo">ArcticCart</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home2.html">Home</a></li>
+                    <li class="nav-item"><a href="./about.html">About</a></li>
+                    <li class="nav-item"><a href="./valorant.html">Valorant Store</a></li>
+                    <li class="nav-item"><a href="./pubg.html">PUBG Store</a></li>
+                    <li class="nav-item"><a href="./connect.html">Connect Neo X</a></li>
+                    <li class="nav-item"><a href="./profile.html">My Profile</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome to ArcticCart</h1>
+            <p>Your premier In-Game NFT Marketplace where gaming and blockchain technology converge to redefine digital ownership. Buy, sell, and trade exclusive game-related NFTs with confidence and ease.</p>
+            <a href="#explore" class="cta-button">Explore NFTs</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>At ArcticCart, we're building a community that empowers gamers to truly own their digital items. Our platform hosts a wide range of unique digital assets, from rare in-game items and skins to collectible character cards and achievements, all secured on the blockchain for verifiable ownership and authenticity.</p>
+            <p>Whether you're a gamer looking to unlock new in-game experiences or a collector in pursuit of exclusive items, we ensure you have access to the best the gaming world has to offer. Our platform is designed to grow with the gaming community, offering new opportunities to discover, trade, and own assets that go beyond the game.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Unique NFTs Uploaded</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">NFTs Sold</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">300+</div>
+                <div class="stat-label">Satisfied Customers</div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ArcticCart</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Games</h3>
+                <ul>
+                    <li><a href="./valorant.html">Valorant</a></li>
+                    <li><a href="./pubg.html">PUBG</a></li>
+                    <li><a href="#">Counter-Strike</a></li>
+                    <li><a href="#">Fortnite</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ArcticCart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
