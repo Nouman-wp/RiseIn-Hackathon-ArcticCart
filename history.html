@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Store - ArcticCart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #000000, #1a0b2e);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: #16071d;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0px 0px 50px rgb(230, 160, 230);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f1f1f1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            background-color: #1a1b26;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: #cccccc;
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d5b4fc;
+            margin-bottom: 30px;
+        }
+
+        .store-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .store-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .store-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(138, 43, 226, 0.8);
+        }
+
+        .store-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .store-card-content {
+            padding: 20px;
+        }
+
+        .store-card h2 {
+            margin-top: 0;
+            color: #d5b4fc;
+        }
+
+        .store-card p {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #3a3af1, #7329c6);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            margin-left: 90px;
+
+
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 170px;
+            background-size: 200px;
+        }
+
+        .store-container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+
+        .footer {
+            background-color: #16071d;
+            color: #ffffff;
+            padding: 40px 0;
+            margin-top: 40px;
+            box-shadow: 0px 0px 50px rgba(230, 160, 230, 0.5);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #8a2be2;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #8a2be2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="home2.html" class="logo">ArcticCart</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="home2.html">Home</a></li>
+                    <li class="nav-item"><a href="./about.html">About</a></li>
+                    <li class="nav-item"><a href="./valorant.html">Valorant Store</a></li>
+                    <li class="nav-item"><a href="./pubg.html">PUBG Store</a></li>
+                    <li class="nav-item"><a href="./connect.html">Connect Neo X</a></li>
+                    <li class="nav-item"><a href="./profile.html">My Profile</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>My NFT Purchase History</h1>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; color: #ffffff;">
+                <thead>
+                    <tr style="background-color: #1a1a1a;">
+                        <th style="padding: 15px; border: 2px solid #8a2be2;">NFT Item</th>
+                        <th style="padding: 15px; border: 2px solid #8a2be2;">Price (NEO)</th>
+                        <th style="padding: 15px; border: 2px solid #8a2be2;">Purchase Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #2a2a2a;">
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">Mystic Forest Skin</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">2 NEO</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">2024-09-01</td>
+                    </tr>
+                    <tr style="background-color: #1a1a1a;">
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">Galactic Warrior Armor</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">1.5 NEO</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">2024-08-20</td>
+                    </tr>
+                    <tr style="background-color: #2a2a2a;">
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">Phoenix Feather Wings</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">0.8 NEO</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">2024-08-15</td>
+                    </tr>
+                    <tr style="background-color: #1a1a1a;">
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">Ethereal Sword</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">1 NEO</td>
+                        <td style="padding: 15px; border: 2px solid #8a2be2;">2024-08-05</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ArcticCart</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Games</h3>
+                <ul>
+                    <li><a href="./valorant.html">Valorant</a></li>
+                    <li><a href="./pubg.html">PUBG</a></li>
+                    <li><a href="#">Counter-Strike</a></li>
+                    <li><a href="#">Fortnite</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ArcticCart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
